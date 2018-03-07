@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>OAuth access token</h2>
+        <div class="form-horizontal">
+            <div>Access token</div>
+            <div class="form-control">@ViewBag.oauthToken</div>
+
+            <div>Jwt token</div>
+            <textarea class="form-control" rows="20">@ViewBag.jwt</textarea>
+
+        </div>
+    </div>
+</div>

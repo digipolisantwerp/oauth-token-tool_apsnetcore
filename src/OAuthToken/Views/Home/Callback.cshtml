@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+@model OAuthToken.Models.TokenResponse
+
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>OAuth access token</h2>
+        <form asp-controller="Home" asp-action="ConvertToken" method="post" class="form-horizontal">
+            <label asp-for="Token_type">Token_type</label>
+            <input asp-for="Token_type" class="form-control" />
+
+            <label asp-for="Access_token">Access_token</label>
+            <input asp-for="Access_token" class="form-control" />
+
+            <label asp-for="Expires_in">Expires_in</label>
+            <input asp-for="Expires_in" class="form-control" />
+
+            <button class="btn btn-primary">Convert to jwt-up</button>
+        </form>
+    </div>
+</div>

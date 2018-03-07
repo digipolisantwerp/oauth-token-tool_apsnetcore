@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model OAuthToken.Models.AuthenticatePost
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>OAuth Authorization code grant</h2>
+        <form asp-controller="Home" asp-action="Authenticate" method="post"  class="form-horizontal">
+            <label asp-for="BaseUrl">Base Url (Consent url)</label>
+            <input asp-for="BaseUrl" class="form-control" />
+
+            <label asp-for="TokenUrl">Token Url (App base url + /oauth2/token)</label>
+            <input asp-for="TokenUrl" class="form-control" />
+
+            <label asp-for="ClientId">ClientId</label>
+            <input asp-for="ClientId" class="form-control" />
+
+            <label asp-for="ClientSecret">ClientSecret</label>
+            <input asp-for="ClientSecret" class="form-control" />
+
+            <label asp-for="Service">Service</label>
+            <input asp-for="Service" class="form-control" />
+
+            <label asp-for="Scope">Scope</label>
+            <input asp-for="Scope" class="form-control" />
+
+            <label asp-for="CallbackUri">RedirectUri</label>
+            <input asp-for="CallbackUri" class="form-control" />
+
+            <button class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</div>
